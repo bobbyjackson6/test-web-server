@@ -1,0 +1,49 @@
+{
+  "name": "test-datalouna",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rimraf ./build && tsc -p tsconfig.json",
+    "start": "npm run build && node build/index",
+    "dev": "nodemon --exec 'npm run start'",
+    "lint": "npx eslint ./src",
+    "lint:fix": "npm run lint --fix",
+    "migrate-lint": "npx @eslint/migrate-config .eslintrc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@eslint/eslintrc": "^3.1.0",
+    "@eslint/js": "^9.13.0",
+    "@types/bcrypt": "^5.0.2",
+    "@types/node": "^22.8.4",
+    "@typescript-eslint/eslint-plugin": "^8.12.1",
+    "@typescript-eslint/parser": "^8.12.1",
+    "eslint": "^9.13.0",
+    "husky": "^9.1.6",
+    "nodemon": "^3.1.7",
+    "prettier": "^3.3.3",
+    "rimraf": "^6.0.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "@fastify/redis": "^7.0.1",
+    "@types/pg": "^8.11.10",
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.5",
+    "fastify": "^5.0.0",
+    "fastify-plugin": "^5.0.1",
+    "ioredis": "^5.4.1",
+    "pg": "^8.13.1"
+  }
+}
