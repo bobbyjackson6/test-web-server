@@ -1,18 +1,16 @@
 # Test Web Server
 
-Тестовый Web Server
-
-* [Что умеет](#options)
-* [Структура проекта](#structure)
-* [Как запустить](#run)
+* [Functiononality](#options)
+* [Project structure](#structure)
+* [How to start](#run)
 __________
-## Что умеет <a id="options" name="options"></a>
-- Логиниться по паролю (пользователь должен уже быть в БД)
-- Менять пароль пользователя
-- Получать список предметов
-- Покупать предметы
+## Functiononality <a id="options" name="options"></a>
+- Log in with a password (the user must already be in the database)
+- Change the user's password
+- Get a list of items
+- Buy items
 __________
-## Структура проекта <a id="structure" name="structure"></a>
+## Project structure <a id="structure" name="structure"></a>
 ```
 src
 ├── app
@@ -47,14 +45,14 @@ src
 ```
 
 __________
-## Как запустить? (dev-режим) <a id="run" name="run"></a>
-Пререквизит: 
-a. Необходима установленная БД postgres
-б. В эту бд необходимо добавить таблицы из файла schema.sql
+## How to start? (dev-mode) <a id="run" name="run"></a>
+Prerequisites: 
+a. An installed postgres database is required.
+b. Tables from the schema.sql file must be added to this database.
 
-После того, как пререквизить выполнен, можно пререходить к запуску проекта:
-1. Ставим зависимости (``npm install``)
-3. Добавляем .env файл со структурой:
+After the prerequisite is completed, you can proceed to the launch of the project:
+1. Install the dependencies (`npm install")
+3. Add the .env file with the structure:
 ````
     ├──DB_USER
     ├──DB_HOST
@@ -63,6 +61,6 @@ a. Необходима установленная БД postgres
     ├──DB_PORT
     └──ENTRY_PASSWORD
 ````
-2. Запускаем приложение .
-    - В режиме разработчика `npm run dev`
-    - В обычном режиме `npm run start`
+2. Launch the app.
+    - In dev mode `npm run dev`
+    - In default mode `npm run start`
